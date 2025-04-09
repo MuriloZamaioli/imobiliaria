@@ -47,3 +47,16 @@ function fnTrocarBanner3(){
 function fnTrocarBanner4(){
     document.getElementById("banner").src="images/banner04.jpg"
 }
+
+function fnCadastrarEmail(){
+    let email = document.getElementById("email").value
+    alert("Seu email ["+email+"] foi cadastrado com sucesso")
+    document.getElementById("email").value = ""
+}
+function fnMostrarHora(){
+    const agora = new Date()
+    const horas = agora.getHours()
+    const minutos = agora.getMinutes()
+    document.getElementById("horas").innerText = (`${horas}:${minutos}`)
+}
+setInterval(fnMostrarHora,1000)
